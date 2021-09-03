@@ -1,4 +1,4 @@
-# flipcart-price-drop-alert
+# flipkart-price-drop-alert
 
 This is a simple price drop alert system made with Django.    
 
