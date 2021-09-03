@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title  %}
+Sign up
+{% endblock %}
+
+
+{%block reg-ul%}nav-active{% endblock %}
+
+
+{% block content %}
+<nav class="breadcrumb">
+    <span class="breadcrumb-item active"><strong>Sign up</strong></span>
+</nav>
+{% load crispy_forms_tags %}
+<div class="container">
+    <div class="row">
+        <div class="col-0 col-md-3"></div>
+        <div class="col-12 col-md-6">
+        <h2 style="display: inline;">Sign up</h2>
+        </div>
+        <div class="col-0 col-md-3"></div>
+    </div>
+
+    <form action="" method="POST">
+    <div class="row">
+        <div class="col-0 col-md-3"></div>
+        <div class="col-12 col-md-6">
+        {% csrf_token %}
+
+        {{ form | crispy }}
+        <input type="submit" class="btn btn-success" value="Sign up">
+        </div>
+        <div class="col-0 col-md-3"></div>
+    </div>
+    </form>
+
+
+</div>
+
+
+{%  endblock%}
